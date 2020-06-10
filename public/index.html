@@ -13,6 +13,9 @@
     <!-- 我们对vant.css进行了修改，所以这个地方不再做两次处理，考虑到vant.css的大小在开发的时候影响也比较小的原因，统一从cdn上获取 -->
     <link rel="stylesheet" href="https://h5.lezhiyun.com/cdn/css/normalize.css">
     <link rel="stylesheet" href="https://h5.lezhiyun.com/cdn/vant/vant.css">
+    <% for (var i in htmlWebpackPlugin.options.cdnCSS && htmlWebpackPlugin.options.cdnCSS) { %>
+      <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdnCSS[i] %>">
+    <% } %>
   </head>
   <body>
     <div id="app" class="app-welcome">
@@ -22,8 +25,8 @@
       <!-- 如果是根据不同的应用加载不同的logo，来源最好是校信提供的本地缓存过的图片 -->
     </div>
     <!-- 使用CDN的JS文件 -->
-    <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn) { %>
-      <script src="<%= htmlWebpackPlugin.options.cdn[i] %>"></script>
+    <% for (var i in htmlWebpackPlugin.options.cdnJS && htmlWebpackPlugin.options.cdnJS) { %>
+      <script src="<%= htmlWebpackPlugin.options.cdnJS[i] %>"></script>
     <% } %>
   </body>
 </html>

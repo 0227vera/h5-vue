@@ -3,11 +3,7 @@
 
 ## 使用的技术栈
 
-`vue全家桶` + `vue-cli3` + `vant` + `scss`
-
-## 资料阅读
-
-[前端设计规范](http://fe.lezhixing.com.cn/standard/)
+`vue全家桶` + `vue-cli3` + `axios` +  `vant` + `scss`
 
 ## 开发前必读
 
@@ -19,7 +15,7 @@
 
 ## 目录说明
 
-```
+```md
 h5-ts
 |  public                 // 静态文件
 |
@@ -44,7 +40,6 @@ h5-ts
     │
     └─utils               // 工具类
     | ├─device.js         // 设备设别
-    | ├─native.js         // 校信方法，后续会持续完善（需同校信协商确保可以使用）
     | ├─rotateImg.js      // 图片旋转
     | ├─url.js            // 地址解析
     ├─views               // 业务页面

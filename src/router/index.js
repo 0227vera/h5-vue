@@ -12,7 +12,8 @@ const routes = [
     meta: {
       tabIndex: 0,
       isFooterShow: true,
-      animateIndex: 10
+      animateIndex: 10,
+      title: '首页'
     }
   },
   {
@@ -25,7 +26,8 @@ const routes = [
     meta: {
       tabIndex: 1,
       isFooterShow: true,
-      animateIndex: 20
+      animateIndex: 20,
+      title: '设置'
     }
   }
 ]

@@ -37,7 +37,6 @@
 // todo: 校信上关闭，如果是带有头部的环境，隐藏此头部，同时设置document.title
 // todo: 如果头部上有确认等功能按钮，则不隐藏头部，仅仅隐藏关闭。
 import { mapState } from 'vuex'
-import native from '../utils/native'
 import deviceInfo from '@/utils/device'
 export default {
   name: 'AppHeader',
@@ -85,7 +84,6 @@ export default {
       this.$router.push({ name: 'CustomerService' })
     },
     closeApp () {
-      native.closeH5()
     }
   }
 }

@@ -4,14 +4,19 @@ const path = require('path')
 const config = require('./package.json')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-// 项目需要用到的cdn
-const CDN = [
-  'https://h5.lezhiyun.com/cdn/vue/vue.min.js',
-  'https://h5.lezhiyun.com/cdn/vue/vuex.min.js',
-  'https://h5.lezhiyun.com/cdn/vue/vue-router.min.js',
-  'https://h5.lezhiyun.com/cdn/vant/vant.min.js',
-  'https://h5.lezhiyun.com/cdn/js/axios.min.js',
-  'https://h5.lezhiyun.com/cdn/js/fastclick.js'
+// 项目需要用到的cdn所有的cdn如果需要使用的时候建议先通过npm下载到本地之后再放在自己的服务器上，这样做是安全性更高的
+const CDNJS = [
+  'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js',
+  'https://unpkg.com/vuex@3.4.0/dist/vuex.js',
+  'https://unpkg.com/vue-router@3.3.2/dist/vue-router.js',
+  'https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js',
+  'https://unpkg.com/axios/dist/axios.min.js',
+  'https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.js'
+]
+
+const CDNCSS = [
+  'https://cdn.jsdelivr.net/npm/vant@2.8/lib/index.css',
+  'https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.css'
 ]
 
 module.exports = {
@@ -59,7 +64,8 @@ module.exports = {
     if (process.env.NODE_ENV === 'production') {
       config.plugin('html')
         .tap(args => {
-          args[0].cdn = CDN
+          args[0].cdnJS = CDNJS
+          args[0].cdnCSS = CDNCSS
           return args
         })
     }
