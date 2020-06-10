@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <!-- 忽略浏览器自动识别数字为电话号码 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 忽略浏览器自动识别邮箱账号 -->
+    <meta name="format-detection" content="email=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- 我们对vant.css进行了修改，所以这个地方不再做两次处理，考虑到vant.css的大小在开发的时候影响也比较小的原因，统一从cdn上获取 -->
+    <link rel="stylesheet" href="https://h5.lezhiyun.com/cdn/css/normalize.css">
+    <link rel="stylesheet" href="https://h5.lezhiyun.com/cdn/vant/vant.css">
+  </head>
+  <body>
+    <div id="app" class="app-welcome">
+      <!-- todo: 使用校信缓存图片 -->
+      <!-- 统一的加载css的loading还是根据不同的应用使用不同的logo -->
+      <!-- 如果是使用统一的css的loading加载可以直接处理，需要设计给出相关的loading动画 -->
+      <!-- 如果是根据不同的应用加载不同的logo，来源最好是校信提供的本地缓存过的图片 -->
+    </div>
+    <!-- 使用CDN的JS文件 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn) { %>
+      <script src="<%= htmlWebpackPlugin.options.cdn[i] %>"></script>
+    <% } %>
+  </body>
+</html>

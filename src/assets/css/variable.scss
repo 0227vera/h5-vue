@@ -1,0 +1,43 @@
+$primary-color: #1989fa; // 基础颜色，蓝色
+
+$white-color: #ffffff; //基础颜色,白色
+
+$group-space: 10px; // group、cell默认间距
+
+$warning-color: #E6A23C; // 警告色
+
+$success-color: #67C23A; // 绿色
+
+$base-bg-color: #f7f8fa; // 基础背景颜色
+// 字体颜色
+$font-primary-color: #323233; // 字体主要颜色
+$font-color--secondary: #969799; // 字体次要颜色
+$font-color--highlight: $primary-color; // 字体高亮颜色
+$tips-color: $font-color--secondary; // 提示字体颜色
+
+$acive-color: #f5f6f7; // 被点击后变化的颜色
+
+// 主要颜色与白色混合的不同亮度
+$primary-color-light-1: mix($white-color, $primary-color, 10%) !default;
+
+$primary-color-light-2: mix($white-color, $primary-color, 20%) !default;
+
+$primary-color-light-3: mix($white-color, $primary-color, 30%) !default;
+
+$primary-color-light-4: mix($white-color, $primary-color, 40%) !default;
+
+$primary-color-light-5: mix($white-color, $primary-color, 50%) !default;
+
+$primary-color-light-6: mix($white-color, $primary-color, 60%) !default;
+
+$primary-color-light-7: mix($white-color, $primary-color, 70%) !default;
+
+$primary-color-light-8: mix($white-color, $primary-color, 80%) !default;
+
+$primary-color-light-9: mix($white-color, $primary-color, 90%) !default;
+
+$padding: 0 16px; // 两边的留白
+
+$cell-abel-font-size: 18px; // 使用cell的时候的label的字体大小
+
+$cell-label-color: #000000; // 使用cell的时候的label的字体大小
