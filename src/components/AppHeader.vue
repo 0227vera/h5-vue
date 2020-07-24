@@ -131,7 +131,9 @@ export default {
       height: 100%;
       max-width: 30%;
       overflow: hidden;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .van-nav-bar__right {
       height: 100%;
