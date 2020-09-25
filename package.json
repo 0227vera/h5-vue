@@ -11,7 +11,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "init": "bash init.sh",
-    "postinit": "rm -rf deploy.sh"
+    "postinit": "npm start"
   },
   "repository": {
     "type": "git",
