@@ -11,7 +11,11 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "init": "bash init.sh",
-    "postinit": "rm -rf deploy.sh && npm i"
+    "postinit": "rm -rf deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "{{gitAddress}}"
   },
   "dependencies": {
     "axios": "^0.19.2",
