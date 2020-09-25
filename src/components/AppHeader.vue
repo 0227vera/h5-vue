@@ -36,26 +36,25 @@
 <script>
 // todo: 校信上关闭，如果是带有头部的环境，隐藏此头部，同时设置document.title
 // todo: 如果头部上有确认等功能按钮，则不隐藏头部，仅仅隐藏关闭。
-import { mapState } from 'vuex'
-import deviceInfo from '@/utils/device'
+import { mapState } from "vuex";
+import deviceInfo from "@/utils/device";
 export default {
-  name: 'AppHeader',
-  data () {
+  name: "AppHeader",
+  data() {
     return {
       isIOS: deviceInfo.isIOS
-    }
+    };
   },
   computed: mapState({
     header: state => state.header
   }),
-  components: {
-  },
-  created () {
-    console.log(555)
+  components: {},
+  created() {
+    console.log(555);
   },
   methods: {
-    onClickLeft () {
-      history.go(-1)
+    onClickLeft() {
+      history.go(-1);
       // todo: 增加返回提示未保存功能
       // todo: 如果是刚进来，则直接退出
       // 1）如果是通过history.length来判断，如果其他人在开发的时候，新增了一个welcome页面，则会出现问题
@@ -68,25 +67,24 @@ export default {
       // onClickLeft: (fn) => {
       //   fn(true)
       // }
-      let t
-      if (this.$route.name === 'Home') {
+      let t;
+      if (this.$route.name === "Home") {
         t = setTimeout(() => {
-          this.closeApp()
-        }, 200)
+          this.closeApp();
+        }, 200);
       }
-      this.header.onClickLeft((isRejectOut) => {
+      this.header.onClickLeft(isRejectOut => {
         if (isRejectOut && t) {
-          clearTimeout(t)
+          clearTimeout(t);
         }
-      })
+      });
     },
-    goCustomerSevice () {
-      this.$router.push({ name: 'CustomerService' })
+    goCustomerSevice() {
+      this.$router.push({ name: "CustomerService" });
     },
-    closeApp () {
-    }
+    closeApp() {}
   }
-}
+};
 </script>
 <style scoped lang="scss">
 .isIOS {
