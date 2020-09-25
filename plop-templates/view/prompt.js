@@ -46,7 +46,7 @@ module.exports = {
     const actions = [
       {
         type: "add",
-        path: `src/pages/${name}/index.vue`,
+        path: `src/views/${name}.vue`,
         templateFile: "plop-templates/view/index.hbs",
         data: {
           name: name,
