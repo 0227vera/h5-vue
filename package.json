@@ -10,8 +10,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "init": "bash init.sh",
-    "postinit": "npm start"
+    {{if needInitGit}}"init": "bash init.sh", {{/if}}
+    {{if needInitGit}}"postinit": "npm start" {{/if}}
   },
   "repository": {
     "type": "git",
