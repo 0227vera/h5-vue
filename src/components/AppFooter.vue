@@ -6,40 +6,39 @@
         :key="item.path"
         :icon="item.icon"
         :to="item.path"
-        >{{ item.name }}</van-tabbar-item
-      >
+      >{{ item.name }}</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
 
 <script>
-import deviceInfo from "@/utils/device";
+import deviceInfo from '@/utils/device'
 export default {
-  name: "AppFooter",
-  data() {
+  name: 'AppFooter',
+  data () {
     return {
       isIOS: deviceInfo.isIOS,
       tabbarList: [
-        { name: "打卡", path: "/", icon: "location" },
-        { name: "设置", path: "/setting", icon: "setting" },
-      ],
-    };
+        { name: '打卡', path: '/', icon: 'location' },
+        { name: '设置', path: '/setting', icon: 'setting' }
+      ]
+    }
   },
   computed: {
     active: {
       // warning
       // 目前的设计是高亮根据路由配置的meta来实现。
       // 如果是子路由，则加一个.来分割
-      get() {
-        return this.$route.meta.tabIndex;
+      get () {
+        return this.$route.meta.tabIndex
       },
-      set() {
+      set () {
         // console.log()
-      },
-    },
+      }
+    }
   },
-  components: {},
-};
+  components: {}
+}
 </script>
 <style scoped lang="scss">
 .isIOS {
